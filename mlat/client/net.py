@@ -55,14 +55,14 @@ class ReconnectingConnection(LoggingMixin, asyncore.dispatcher):
         self.host = host
         self.port = port
         # check port as well, if port doesn't match, could be direct MLAT
-        if self.host == 'feed.adsbexchange.com' and port == 31090:
+        if self.host == 'feed.adsb.fi' and port == 31090:
             self.adsbexchange = True
         else:
             self.adsbexchange = False
         self.adsbexchangePortIndex = 0
         self.adsbexchangeHostIndex = 0
         self.adsbexchangePorts = [ 31090, 64590 ]
-        self.adsbexchangeHosts = [ 'feed1.adsbexchange.com', 'feed2.adsbexchange.com' ]
+        self.adsbexchangeHosts = [ 'feed1.adsb.fi, 'feed2.adsb.fi' ]
         self.addrlist = []
         self.state = 'disconnected'
         self.reconnect_at = None
