@@ -62,7 +62,7 @@ class ReconnectingConnection(LoggingMixin, asyncore.dispatcher):
         self.adsbexchangePortIndex = 0
         self.adsbexchangeHostIndex = 0
         self.adsbexchangePorts = [ 31090, 64590 ]
-        self.adsbexchangeHosts = [ 'feed1.adsb.fi, 'feed2.adsb.fi' ]
+        self.adsbexchangeHosts = [ 'feed1.adsb.fi', 'feed2.adsb.fi' ]
         self.addrlist = []
         self.state = 'disconnected'
         self.reconnect_at = None
